@@ -1,14 +1,18 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
 
-const ProjectList = ({ projects }) => {
+function ProjectList({ projects }) {
+  const myprojects = projects.map((obj)=>{
+    return <ProjectItem name={obj.name} key={obj.id} about={obj.about} technologies={obj.technologies}/>
+  }  
+  )
+  
   return (
-    <div>
-      {projects.map(project => (
-        <ProjectItem key={project.id} project={project} />
-      ))}
+    <div id="projects">
+      <h2>My Projects</h2>
+      <div id="project-list">{myprojects}</div>
     </div>
   );
-};
+}
 
-export default ProjectList;
+export default ProjectList

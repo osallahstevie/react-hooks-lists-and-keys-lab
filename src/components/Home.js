@@ -10,4 +10,4 @@ function Home({ color, username, city }) {
   );
 }
 
-export default Home;
+export default Home

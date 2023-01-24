@@ -1,13 +1,23 @@
-import React from "react";
+import React, {useState}from "react";
 
-const ProjectItem = ({ project: { technologies } }) => {
+function ProjectItem({ name, about, technologies }) {
+
+  
+  const technologiesSpan= technologies.map((obj)=>{
+      return <span key={obj}>{obj}</span>
+    
+  })
+  
   return (
-    <div>
-      {technologies.map((tech, index) => (
-        <span key={index}>{tech}</span>
-      ))}
+    <div className="project-item">
+      <h3>{name}</h3>
+      <p>{about}</p>
+      <div className="technologies">
+        {technologiesSpan}
+        
+      </div>
     </div>
   );
-};
+}
 
 export default ProjectItem;

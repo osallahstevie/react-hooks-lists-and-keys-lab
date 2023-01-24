@@ -10,4 +10,4 @@ function Links({ github, linkedin }) {
   );
 }
 
-export default Links;
+export default Links
